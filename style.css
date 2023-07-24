@@ -1,0 +1,222 @@
+/* 10,000+ of our users love our products.
+
+    We only provide great products combined with excellent customer service.
+    See what our satisfied customers are saying about our services.
+    
+    Rated 5 Stars in Reviews
+    Rated 5 Stars in Report Guru
+    Rated 5 Stars in BestTech
+    
+    Colton Smith 
+    Verified Buyer
+    "We needed the same printed design as the one we had ordered a week prior.
+    Not only did they find the original order, but we also received it in time.
+    Excellent!"
+    
+    Irene Roberts 
+    Verified Buyer
+    "Customer service is always excellent and very quick turn around. Completely
+    delighted with the simplicity of the purchase and the speed of delivery."
+    
+    Anne Wallace 
+    Verified Buyer
+    "Put an order with this company and can only praise them for the very high
+    standard. Will definitely use them again and recommend them to everyone!" 
+    */
+
+*{
+    box-sizing: border-box;
+    font-family: 'League Spartan';
+    font-size: 15px;
+}
+
+:root{
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1440px;
+    height: 100vh;
+    padding: 200px;
+}
+
+#info-ratings{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px;
+}
+
+#info{
+    display: flex;
+    flex-direction: column;
+}
+#heading-info{
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 700;
+    width: 60%;
+    color: var(--very-dark-magenta);
+    margin-bottom: 20px;
+}
+#paragraph-info{
+    text-align: left;
+    line-height: 20px;
+    width: 70%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark-grayish-magenta);
+    margin-bottom: 60px;
+}
+
+#ratings{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+#reviews, #report-guru, #best-tech{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    background-color: var(--light-grayish-magenta);
+    font-weight: 700;
+    color: var(--very-dark-magenta);
+    margin: 10px;
+    border-radius: 10px;
+}
+#report-guru{
+    translate: 45px;
+}
+#best-tech{
+    translate: 80px;
+}
+.stars{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.rate{
+}
+
+#user-reviews{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#user-1, #user-2, #user-3{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--very-dark-magenta);
+}
+.profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.profile-pic{
+    border-radius: 50%;
+    width: 50px;
+    margin-right: 20px;
+}
+.name-status{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.name{
+    font-weight: 700;
+    margin-bottom: 0px;
+    color: var(--white);
+}
+.status{
+    font-weight: 500;
+    margin-top: 5px;
+    color: var(--soft-pink);
+    opacity: 0.6;
+}
+.review{
+    margin-top: 20px;
+    font-weight: 500;
+    width: 87%;
+    line-height: 17px;
+    color: var(--white);
+}
+
+@media (max-width: 1100px){
+    body{
+    background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    }
+
+    #info-ratings, #user-reviews{
+        flex-direction: column;
+        justify-content: center;
+        width: 400px;
+    }
+    #info-ratings{
+        /* margin-top: 700px; */
+        padding-top: 750px;
+    }
+    #info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #heading-info{
+        text-align: center;
+        width: 100%;
+    }
+    #paragraph-info{
+        text-align: center;
+        width: 79%;
+    }
+    #ratings{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .stars{
+        margin-top: 10px;
+    }
+    #user-reviews{
+        padding-bottom: 100px;
+    }
+    #reviews, #report-guru, #best-tech{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        translate: 0px;
+        width: 90%;
+    }
+    #user-reviews{
+        width: 80%;
+        align-items: center;
+    }
+}
