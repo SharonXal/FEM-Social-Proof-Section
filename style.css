@@ -131,6 +131,12 @@ body{
     border-radius: 10px;
     background-color: var(--very-dark-magenta);
 }
+#user-2{
+    translate: 0px 20px;
+}
+#user-3{
+    translate: 0px 40px;
+}
 .profile{
     display: flex;
     flex-direction: row;
